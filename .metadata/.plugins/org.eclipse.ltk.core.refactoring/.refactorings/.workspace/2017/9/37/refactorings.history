@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;fibo-series-recursion-synamic-programming&apos;" deleteContents="false" description="Delete resource &apos;fibo-series-recursion-synamic-programming&apos;" element1="/fibo-series-recursion-synamic-programming" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1505385610382"/>
+</session>

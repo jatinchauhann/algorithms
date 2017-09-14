@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class BinarySearch {
+	public static int binarySearch(int[] arr, int begin, int end, int val) {
+		if (end >= 1) {
+			int mid = begin + (end - 1) / 2;
+			if (arr[mid] == val)
+				return mid;
+			if (arr[mid] > val)
+				return binarySearch(arr, begin, mid - 1, val);
+			return binarySearch(arr, mid + 1, end, val);
+		}
+		return -1;
+	}
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the Lengh of Array");
+		int n = in.nextInt();
+		int[] arr = new int[n];
+		System.out.println("Enter the values in the array");
+		for (int i = 0; i < n; i++)
+			arr[i] = in.nextInt();
+		System.out.println("Enter the value to be searched");
+		int search = in.nextInt();
+		int result = BinarySearch.binarySearch(arr, 0, n - 1, search);
+		if (result == -1)
+			System.out.println("No value found!");
+		else
+			System.out.println("Element found at the position" + result++);
+	}
+}

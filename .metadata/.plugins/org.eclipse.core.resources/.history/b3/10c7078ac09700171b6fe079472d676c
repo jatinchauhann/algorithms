@@ -1,0 +1,14 @@
+
+public class BinarySearch {
+	public int binarySearch(int[] arr, int begin, int end, int val) {
+		if (end >= 1) {
+			int mid = begin + (end - 1) / 2;
+			if (arr[mid] == val)
+				return mid;
+			if (arr[mid] > val)
+				return binarySearch(arr, begin, mid - 1, val);
+			return binarySearch(arr, mid + 1, end, val);
+		}
+		return -1;
+	}
+}
